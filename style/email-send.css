@@ -1,0 +1,99 @@
+:root {
+    /* variables para los colores del proyecto */
+    --black:#000000;
+    --white: #FFFFFF;
+    --very-light-pink: #929090;
+    --text-input-field: #F7F7F7;
+    --dark: #232830;
+    --hospital-green: #ACD9B2;
+    /* variables para los tamaños */
+    --sm:14px;
+    --md:16px;
+    --lg:18px;
+}
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+/* login es el contenedor de todo */
+.login{
+    display: grid;
+    place-items: center; /*centra todo el contenido  */
+    width: 100%;
+    height: 100vh;
+
+}
+.form-container {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+.logo {
+    
+    display: none;/* se le pone none para que no aparezca en desktop sino en mobile */
+    margin-bottom: 50px;
+    justify-self: center;
+    width: 150px;
+}
+.title{
+    margin-bottom: 12px;
+    text-align: center;
+
+    font-size: var(--lg);
+    
+}
+.subtitle{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 32px;
+
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    font-weight: 300;
+}   
+.email-image{
+    /* centrar la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  */
+    margin-bottom: 24px;
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-color: var(--text-input-field);
+}
+.email-image img{
+    width: 80px;
+}
+.primary-button{
+    margin-top: 14px;
+    margin-bottom: 30px;
+
+    height: 50px;
+    width: 100%;
+
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    cursor: pointer;/*para que aparezca una mano en vez de una fecha al pasar el cursor por encima del boton  */
+    font-size: var(--md);
+    font-weight: bold;/*negrilla */
+}
+.resend {
+font-size: var(--sm);
+}
+.resend span{
+    color: var(--very-light-pink);
+}
+.resend a{
+    color: var(--hospital-green);
+    text-decoration: none;
+}
+@media (max-width: 430px){/*se pone max porque los estilos que se colocaron antes se aplicaran para el tamaño mas grande que el que le estoy indicando */
+    .logo {
+        display: block;
+    }
+}

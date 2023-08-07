@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>	
+        <meta charset="UTF-8">	
+        <meta name="description" content="esta es una pagina de algo"/>	
+        <meta name= "robots" content="index,follow"/>	
+        <title>Login </title>	
+        <link rel = "stylesheet" href="./style/login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+      </head>	
+  <body>
+   <!--el div login ocupa toda la pantalla  -->
+    <div class ="login">
+      <div class ="form-container">
+        <img src="./logos/logo_yard_sale.svg"alt= "logo" class="logo">
+        
+        <form action="/" class="form">
+          <label for="email" class="label">Email address</label>
+          <input type="text" id="email" placeholder="correo@example.com" class="input input-email">
+          <label for="password" class="label">Password</label>
+          <input type="password" id="password" placeholder="*********" class="input input-password">
+          <input type="submit" value="log in" class="primary-button login-button">
+          <a href="/">Forgot my password</a>
+        </form>
+        <button class="secundary-button signup-button">Sign up</button>
+      </div>
+    </div>
+  </body>
+</html>
