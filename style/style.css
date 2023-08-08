@@ -9,3 +9,128 @@
 body {
     font-family: 'Quicksand', sans-serif;
 }
+/* estilos de navbar */
+.navbar-main {
+    display: flex;
+    justify-content:space-between;
+    padding: 0 24px;
+    border-bottom:1px solid var(--very-light-pink);
+}
+.navbar-left {
+    display: flex;
+}
+.menu {
+    display: none;
+}
+.logo {
+    width: 100px;
+}
+.navbar-left ul, .navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0px 8px 0 8px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar-left ul li a, .navbar-right ul li a{
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    padding: 8px;
+}
+.navbar-left ul li a:hover, .navbar-right ul li a:hover{
+    color: var(--hospital-green);
+    border: 1px solid var(--hospital-green);
+}
+.email{
+    font-size: var(--sm);
+    font-weight: bold;
+    color: var(--very-light-pink);
+    margin-right: 12px;
+}
+.email img{
+    margin-left: 10px;
+    margin-right: 10px;
+    transform: rotate(90deg);
+    width: 9px;
+    cursor: pointer;
+}
+.navbar-shopping-cart{
+    position: relative;
+}
+.navbar-shopping-cart div{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--sm);
+    width: 14px;
+    height: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: var(--hospital-green);
+    top: -6px;
+    right: -3px;
+}
+.inactive {
+    display: none;
+}
+/* navbar */
+
+/* estilos de menu */
+.desktop-menu {
+    position: absolute;
+    background: var(--white);
+    top: 68px;
+    right: 68px;
+    width: 100px;
+    height: auto;
+    border: 2px solid var(--very-light-pink);
+    border-radius: 8px;
+    padding: 20px 20px 0 20px;
+}.desktop-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.desktop-menu ul li {
+    text-align: end;
+}
+/* ultimo hijo de la lista */
+.desktop-menu ul li:last-child {
+    padding-top: 15px;
+    border-top: 1px solid var(--very-light-pink);
+}
+/* seleciona los elementos de  li menos el ultimo*/
+.desktop-menu ul li:not(:last-child) {
+    font-weight: bold;
+}
+/* ultimo hijo de la lista se escoje a "a" */
+.desktop-menu ul li:last-child a {
+    color: var(--hospital-green);
+    font-size: var(--sm);
+}
+.desktop-menu ul li a {
+    display: inline-block;/* para poder ponerle el margin */
+    color: var(--black);
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+/* menu */
+
+@media (max-width:640px){
+    /* estilos de navbar */
+    .menu{
+        display: block;
+    }
+    .navbar-left ul{
+        display: none;
+    }
+    .email {
+        display: none;
+    }
+    /*navbar */
+}

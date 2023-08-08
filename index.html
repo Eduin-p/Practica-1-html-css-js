@@ -4,15 +4,63 @@
         <meta charset="UTF-8">	
         <meta name="description" content="esta es una pagina de algo"/>	
         <meta name= "robots" content="index,follow"/>	
-        <title>Estructura de Html y Css </title>	
+        <title>YardSale tienda de cosas</title>	
+        <link rel = "stylesheet" href="./style/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-       <meta name="viewport" content="width=device-width, initial-scale=1,0">	
-        <!--<link rel = "stylesheet" href="./style/style.css">	
-      el  nombre del css por lo general es el nombre de la pantalla que se esta trabajando-->
       </head>	
-<body>
-    
-</body>
+      <body>
+        <nav class="navbar-main" >
+            <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+            <div class="navbar-left" >
+                <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+                <ul>
+                    <li>
+                        <a href="/">All</a>
+                    </li>
+                    <li>
+                        <a href="/">Clothes</a>
+                    </li>
+                    <li>
+                        <a href="/">Electronics</a>
+                    </li>
+                    <li>
+                        <a href="/">Fornitures</a>
+                    </li>
+                    <li>
+                        <a href="/">Toys</a>
+                    </li>
+                    <li>
+                        <a href="/">Others</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-right" >
+                <ul>
+                    <li class="email">Correo@Example.com
+                        <img src="./icons/flechita.svg" alt="Cuentas">
+                    </li>
+                    <li class="navbar-shopping-cart">
+                        <img src="./icons/icon_shopping_cart.svg" alt="carrito" class="carrito">
+                        <div>2</div>
+                    </li>
+                </ul>    
+            </div>
+        </nav>
+        <div class="desktop-menu inactive">
+          <ul>
+              <li>
+                  <a href="/" class="title">My Orders</a>
+              </li>
+              <li>
+                  <a href="/" class="title">My Account</a>
+              </li>
+              <li>
+                  <a href="/" class="title">Sing out</a>
+              </li>
+          </ul>
+      </div>
+      <script src="./js/main.js"></script>
+      </body>
 </html>
