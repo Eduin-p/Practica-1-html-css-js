@@ -119,8 +119,52 @@ body {
     text-decoration: none;
     margin-bottom: 20px;
 }
-/* menu */
+/* fin menu */
 
+/* menu mobile izquierda */
+.mobile-menu {
+    width: 200px;
+    border: 2px solid var(--very-light-pink);
+    border-radius: 8px;
+    padding: 10px 20px 0 30px;
+}
+.active-menu-mobile {
+    display: none;
+}
+.mobile-menu ul {
+    list-style: none;
+    margin: 36px 0 0;/* separa un poco los ul en la parte superior */
+    padding: 0;
+    font-weight: bold;
+}
+.mobile-menu ul li {
+    text-align:left;
+    margin-bottom: 15px;
+}
+
+.mobile-menu ul li a {
+    display: inline-block;/* para poder ponerle el margin */
+    color: var(--black);
+    text-decoration: none;
+}
+/* colocamos dos clases para darle mas peso por especifidad,
+ sino no toma los estilos porque ya se le puso estilo mas arriba */
+.mobile-menu .email { 
+    font-size: var(--sm);
+    font-weight: lighter;
+}
+.mobile-menu .sign-out{
+    color: var(--hospital-green);
+    font-size: var(--sm);
+}
+.mobile-menu-botton{
+   margin-top: 60px; 
+}
+.mobile-menu  ul:nth-child(2) {
+    padding-top: 15px;
+    border-top: 1px solid var(--very-light-pink);
+}
+/* fin menu mobile */
 @media (max-width:640px){
     /* estilos de navbar */
     .menu{
@@ -133,4 +177,8 @@ body {
         display: none;
     }
     /*navbar */
+    /* menu Email    no funciona */
+    .desktop-menu{
+        display: none;
+    }
 }
