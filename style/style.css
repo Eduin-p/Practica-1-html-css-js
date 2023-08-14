@@ -9,7 +9,7 @@
 body {
     font-family: 'Quicksand', sans-serif;
 }
-/* estilos de navbar */
+/* ----------------estilos de navbar------------- */
 .navbar-main {
     display: flex;
     justify-content:space-between;
@@ -78,9 +78,9 @@ body {
 .inactive {
     display: none;
 }
-/* navbar */
+/* ----------navbar----------------- */
 
-/* estilos de menu */
+/* ----------estilos de menu------------ */
 .desktop-menu {
     position: absolute;
     background: var(--white);
@@ -119,9 +119,9 @@ body {
     text-decoration: none;
     margin-bottom: 20px;
 }
-/* fin menu */
+/*----- fin menu  derecha------*/
 
-/* menu mobile izquierda */
+/* ---------menu mobile izquierda ------*/
 .mobile-menu {
     width: 200px;
     border: 2px solid var(--very-light-pink);
@@ -164,7 +164,8 @@ body {
     padding-top: 15px;
     border-top: 1px solid var(--very-light-pink);
 }
-/* fin menu mobile */
+/* ------------fin menu mobile-------------- */
+
 @media (max-width:640px){
     /* estilos de navbar */
     .menu{
@@ -176,9 +177,14 @@ body {
     .email {
         display: none;
     }
-    /*navbar */
-    /* menu Email    no funciona */
+    /*---- fin navbar---- */
     .desktop-menu{
+        display: none;
+    }
+}
+@media (min-width:641px){
+    /* coloco min-width para que se oculte el menu cuando este desktop */
+    .mobile-menu{
         display: none;
     }
 }
