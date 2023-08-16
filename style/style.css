@@ -61,6 +61,9 @@ body {
 .navbar-shopping-cart{
     position: relative;
 }
+.carrito{
+    cursor: pointer;
+}
 .navbar-shopping-cart div{
     display: flex;
     position: absolute;
@@ -186,6 +189,11 @@ body {
 .menu-container figure{
    margin: 10px 0 10px;
 }
+.menu-container figure img{
+    width: 10px;
+    transform: rotate(180deg);
+    cursor: pointer;
+ }
 .menu-container h1{
     margin: 10px 0 10px;
     font-size: var(--lg);
@@ -264,8 +272,9 @@ body {
     font-size: var(--md);
     font-weight: bold;/*negrilla */
 }
-@media (max-width:640px){
 
+@media (max-width:640px){
+/* aside width 100% */
 }
 /* -----------fin shoppinCart ---------- */
 @media (max-width:640px){
@@ -282,6 +291,9 @@ body {
     /*---- fin navbar---- */
     .desktop-menu{
         display: none;
+    }
+    .my-orders{
+        width: 100%;
     }
 }
 @media (min-width:641px){
