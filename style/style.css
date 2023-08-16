@@ -131,9 +131,6 @@ body {
     border-radius: 8px;
     padding: 10px 20px 0 30px;
 }
-.active-menu-mobile {
-    display: none;
-}
 .mobile-menu ul {
     list-style: none;
     margin: 36px 0 0;/* separa un poco los ul en la parte superior */
@@ -168,21 +165,22 @@ body {
     border-top: 1px solid var(--very-light-pink);
 }
 /* ------------fin menu mobile-------------- */
-/* -----------shopping cart ------------ */
+
+/* ----------- aside shopping cart ------------ */
 .my-orders{
     display: flex;
     align-items: center; 
     flex-direction: column;
-    width: 38vw;
+    width: 500px;
     height: 100vh;
-    margin-right: 50px;
+    /* margin-right: 20px; */
     margin-left: auto;
 
 }
 .menu-container{
     display:flex;
     position: relative;
-    width: 90%;
+    width: 100%;
     top: 10px;
     border-bottom: 2px solid var(--very-light-pink-2);
 }
@@ -190,9 +188,10 @@ body {
    margin: 10px 0 10px;
 }
 .menu-container figure img{
-    width: 10px;
+    width: 13px;
     transform: rotate(180deg);
     cursor: pointer;
+    margin-left: 10px;
  }
 .menu-container h1{
     margin: 10px 0 10px;
@@ -272,6 +271,7 @@ body {
     font-size: var(--md);
     font-weight: bold;/*negrilla */
 }
+/* -------fin Aside shoppingcart ------- */
 
 @media (max-width:640px){
 /* aside width 100% */
@@ -302,3 +302,6 @@ body {
         display: none;
     }
 }
+
+
+/* no oculta el aside de shoppingcart */
