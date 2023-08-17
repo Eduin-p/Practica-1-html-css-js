@@ -167,11 +167,18 @@ body {
 }
 /* ------------fin menu mobile-------------- */
 
-/* ----------- aside shopping cart ------------ */
+/* ----------- aside shopping cart menu derecha------------ */
 .my-orders{
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
     width: 500px;
     margin-left: auto;
-
+    position: absolute;
+    top: 69px;    
+    right: 20px;     
+    background: var(--white);       
+    border-radius: 20px;
 }
 .menu-container{
     display:flex;
@@ -200,13 +207,13 @@ body {
  .main-container {
     width: 90%;
 }
-.product-card{
+.product-card-carrito{
     width: auto;
     display:flex;
     justify-content: space-between;
     margin: 20px 0 20px 0;
 }
-.product-card  img {
+.product-card-carrito  img {
     width: 80px;
     height: 80px;
     border-radius: 16px;
@@ -269,10 +276,66 @@ body {
 }
 /* -------fin Aside shoppingcart ------- */
 
-@media (max-width:640px){
-/* aside width 100% */
+/* ------- inicio  cards de productos --------- */
+.cards-container{
+    display: grid;
+    place-content: center;
+    width: 98vw;
+    /* grid-template-columns crea una plantilla, auto-fill dice que se rellene segun el espacio , luego el tamaño */
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 24px; /*espacio entre los items */
+    margin-top: 15px;
 }
-/* -----------fin shoppinCart ---------- */
+.product-card{
+    width: 240px;
+}
+.product-card img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.product-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+.product-info figure img {
+    width: 36px;
+    height: 36px;
+}
+.product-info figure{
+    margin: 0px;
+}
+
+.product-info div p:nth-child(1){/*  nth.. es para indicar el hijo que quiero utilizar*/
+    margin-bottom: 1px;
+    margin-top: 1px;
+    font-weight: bold;
+    font-size: var(--md);
+}
+.product-info div p:nth-child(2){/*  nth.. es para indicar el hijo que quiero utilizar*/
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--very-light-pink);
+}
+@media (max-width:640px){
+    .cards-container{
+        grid-template-columns: repeat(auto-fill, 140px);
+    }
+    /* product card de inicio */
+    .product-card{
+        width: 140px;
+    }
+    .product-card img {
+        width: 140px;
+        height: 140px;
+    }
+}
+/* ---------- fin de inicio  cards products */
+
 @media (max-width:640px){
     /* estilos de navbar */
     .menu{
@@ -298,6 +361,3 @@ body {
         display: none;
     }
 }
-
-
-/* no oculta el aside de shoppingcart */

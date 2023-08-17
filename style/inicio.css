@@ -15,6 +15,7 @@ body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
 }
+/* ------   menu cards carrito derecha */
 .cards-container{
     display: grid;
     place-content: center;
