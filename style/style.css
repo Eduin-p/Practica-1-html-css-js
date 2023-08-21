@@ -229,15 +229,8 @@ body {
     flex-grow: 1;
 
 }
+/* aqui estaba el nthChlid de los p(price,name) */
 
-.product-info  p:nth-child(2){/*  nth.. es para indicar el hijo que quiero utilizar*/
-    font-weight: bold;
-    font-size: var(--md);
-}
-.product-info p:nth-child(1){/*  nth.. es para indicar el hijo que quiero utilizar*/
-    font-size: var(--sm);
-    color: var(--very-light-pink);
-}
 .delete {
     display: flex;
     align-items: center;
@@ -311,13 +304,13 @@ body {
     margin: 0px;
 }
 
-.product-info div p:nth-child(1){/*  nth.. es para indicar el hijo que quiero utilizar*/
+.price{
     margin-bottom: 1px;
     margin-top: 1px;
     font-weight: bold;
     font-size: var(--md);
 }
-.product-info div p:nth-child(2){/*  nth.. es para indicar el hijo que quiero utilizar*/
+.name{
     font-size: var(--sm);
     margin-top: 0;
     margin-bottom: 0;
