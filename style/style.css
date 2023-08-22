@@ -271,6 +271,91 @@ body {
 }
 /* -------fin Aside shoppingcart ------- */
 
+/* --------- inicio product detail -----*/
+.product-detail{
+    width: 360px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.3);
+}
+.product-detail-close{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border: 2px solid var(--hospital-green);
+    border-radius: 15px;
+    width: 22px;
+    height: 22px;
+}
+
+.product-detail-close img:hover{
+    cursor: pointer;
+}
+.product-detail > img{
+    width: 360px;
+    height: 360px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.galeria{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 36px;
+}
+.position-img{
+    background: var(--very-light-pink-2);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 4px;
+}
+.product-info-detail{
+    padding: 0 24px 24px 24px;
+}
+/*price*/
+/*name*/
+.product-info-detail p:nth-child(3){
+    color: var(--very-light-pink);
+    margin-top: 4px;
+}
+.primary-button{
+    margin-top: 14px;
+    margin-bottom: 30px;
+
+    height: 50px;
+    width: 80%;
+
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    cursor: pointer;/*para que aparezca una mano en vez de una fecha al pasar el cursor por encima del boton  */
+    font-size: var(--md);
+    font-weight: bold;/*negrilla */
+}
+.add-to-cart-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width:640px){
+    .product-detail{
+        width: 100%;
+    }
+}
+/* ----------fin product detail -------*/
 /* ------- inicio  cards de productos --------- */
 .cards-container{
     display: grid;
@@ -303,7 +388,11 @@ body {
 .product-info figure{
     margin: 0px;
 }
-
+.product-info-detail p:nth-child(1){
+    font-size: var(--md);
+    font-weight: bold;
+    margin-bottom: 0;
+}
 .price{
     margin-bottom: 1px;
     margin-top: 1px;
@@ -328,10 +417,10 @@ body {
         width: 140px;
         height: 140px;
     }
-}
-/* ---------- fin de inicio  cards products */
-
-@media (max-width:640px){
+    /* estilo detalle producto */
+    .product-detail{
+        width: 100%;
+    }
     /* estilos de navbar */
     .menu{
         display: block;
@@ -349,6 +438,12 @@ body {
     .my-orders{
         width: 100%;
     }
+
+}
+/* ---------- fin de inicio  cards products */
+
+@media (max-width:640px){
+    
 }
 @media (min-width:641px){
     /* coloco min-width para que se oculte el menu cuando este desktop */
