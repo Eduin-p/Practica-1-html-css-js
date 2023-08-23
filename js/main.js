@@ -13,8 +13,10 @@ const asideMyorders= document.querySelector(".my-orders");
 const cardsContainer= document.querySelector(".cards-container-carrito");
 const cardsContainerInicio= document.querySelector(".cards-container");
 const productDetail =document.querySelector(".product-detail");
+const closeProductDetail = document.querySelector(".product-detail-close img")
 menuCarrito.addEventListener('click',toggleAsideMyorders)
 flechaCarrito.addEventListener('click',toggleAsideMyorders)
+closeProductDetail.addEventListener('click',toggleProdutDetail)
 
 function toggledesktopMenu(){
     desktopMenu.classList.toggle('inactive');
@@ -25,7 +27,9 @@ function toggledesktopMenu(){
     if (!asideMyorders.classList.contains('inactive')) {
         asideMyorders.classList.add('inactive');
     }
-    
+    if (!productDetail.classList.contains('inactive')) {
+        productDetail.classList.add('inactive');
+    }
 }
 function toggleMobileMenu(){
     mobileMenu.classList.toggle('inactive');
@@ -35,6 +39,9 @@ function toggleMobileMenu(){
     }
     if (!asideMyorders.classList.contains('inactive')) {
         asideMyorders.classList.add('inactive');
+    }
+    if (!productDetail.classList.contains('inactive')) {
+        productDetail.classList.add('inactive');
     }
 }
 function toggleAsideMyorders(){
@@ -46,9 +53,21 @@ function toggleAsideMyorders(){
     if (!desktopMenu.classList.contains('inactive')) {
         desktopMenu.classList.add('inactive');
     }
+    if (!productDetail.classList.contains('inactive')) {
+        productDetail.classList.add('inactive');
+    }
 }
-function openProdutDetail(){
-    productDetail.classList.remove('inactive')
+function toggleProdutDetail(){
+    productDetail.classList.toggle('inactive')
+    if (!mobileMenu.classList.contains('inactive')) {
+        mobileMenu.classList.add('inactive');
+    }
+    if (!desktopMenu.classList.contains('inactive')) {
+        desktopMenu.classList.add('inactive');
+    }
+    if (!asideMyorders.classList.contains('inactive')) {
+        asideMyorders.classList.add('inactive');
+    }
 }
 
 // no esta funcionando openproduct 
@@ -142,7 +161,7 @@ function renderProductsInicio(arr){//creacion de cards de inicio
             const img =document.createElement('img');
             img.setAttribute('src',product.image)
             productCard.appendChild(img);// meter los elementos en su padre
-            img.addEventListener('click',openProdutDetail())
+            img.addEventListener('click',toggleProdutDetail)//se pone la funcion sin parentesis
         // -----------------------------------------
             const productInfo =document.createElement('div');
             productInfo.classList.add('product-info')

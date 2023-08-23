@@ -180,6 +180,7 @@ body {
     background: var(--white);       
     border-radius: 20px;
     padding-left: 15px;
+    padding-right: 15px;
     box-shadow:3px 6px 15px rgba(0, 0, 0, 0.3);
 }
 .menu-container{
@@ -207,7 +208,7 @@ body {
     text-align: center;
 }
  .main-container {
-    width: 90%;
+    width: 100%;
 }
 .product-card-carrito{
     width: auto;
@@ -274,14 +275,15 @@ body {
 /* --------- inicio product detail -----*/
 .product-detail{
     width: 360px;
-    display: flex;
+    /* display: flex; */
     position: absolute;
     right: 0;
-    align-items: center;
+    /* align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
     background: var(--white);
     border-radius: 15px;
+    padding: 0 5px;
     box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.3);
 }
 .product-detail-close{
@@ -330,7 +332,7 @@ body {
     color: var(--very-light-pink);
     margin-top: 4px;
 }
-.primary-button{
+/*.primary-button{
     margin-top: 14px;
     margin-bottom: 30px;
 
@@ -343,18 +345,15 @@ body {
     color: var(--white);
     cursor: pointer;/*para que aparezca una mano en vez de una fecha al pasar el cursor por encima del boton  */
     font-size: var(--md);
-    font-weight: bold;/*negrilla */
-}
+    font-weight: bold;/*negrilla 
+} lo quito porque ya existe uno 
+*/
 .add-to-cart-button{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-@media (max-width:640px){
-    .product-detail{
-        width: 100%;
-    }
-}
+
 /* ----------fin product detail -------*/
 /* ------- inicio  cards de productos --------- */
 .cards-container{
@@ -388,11 +387,6 @@ body {
 .product-info figure{
     margin: 0px;
 }
-.product-info-detail p:nth-child(1){
-    font-size: var(--md);
-    font-weight: bold;
-    margin-bottom: 0;
-}
 .price{
     margin-bottom: 1px;
     margin-top: 1px;
@@ -420,6 +414,7 @@ body {
     /* estilo detalle producto */
     .product-detail{
         width: 100%;
+        display: none;
     }
     /* estilos de navbar */
     .menu{
@@ -442,9 +437,6 @@ body {
 }
 /* ---------- fin de inicio  cards products */
 
-@media (max-width:640px){
-    
-}
 @media (min-width:641px){
     /* coloco min-width para que se oculte el menu cuando este desktop */
     .mobile-menu{
