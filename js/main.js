@@ -16,7 +16,20 @@ const productDetail =document.querySelector(".product-detail");
 const closeProductDetail = document.querySelector(".product-detail-close img")
 menuCarrito.addEventListener('click',toggleAsideMyorders)
 flechaCarrito.addEventListener('click',toggleAsideMyorders)
-closeProductDetail.addEventListener('click',toggleProdutDetail)
+//closeProductDetail.addEventListener('click',toggleProdutDetail)
+
+closeProductDetail.addEventListener('click', function(event) {
+    // Obtener el elemento en el que se hizo clic
+    const elemento = event.target;
+    
+    // Aplicar toggle a la clase 'inactive' en el elemento
+    elemento.classList.toggle('inactive');
+  });
+
+  
+// falta arreglar 
+
+
 
 function toggledesktopMenu(){
     desktopMenu.classList.toggle('inactive');
@@ -45,6 +58,7 @@ function toggleProdutDetail(){
      preguntaDesktopMenu()
      preguntaAsideMyorders()
 }
+
 function preguntaMobileMenu(){
     if (!mobileMenu.classList.contains('inactive')) {
         mobileMenu.classList.add('inactive');
