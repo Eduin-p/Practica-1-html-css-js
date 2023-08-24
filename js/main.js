@@ -21,55 +21,50 @@ closeProductDetail.addEventListener('click',toggleProdutDetail)
 function toggledesktopMenu(){
     desktopMenu.classList.toggle('inactive');
     //pregunta si No tiene la clase
-    if (!mobileMenu.classList.contains('inactive')) {
-        mobileMenu.classList.add('inactive');
-    }
-    if (!asideMyorders.classList.contains('inactive')) {
-        asideMyorders.classList.add('inactive');
-    }
-    if (!productDetail.classList.contains('inactive')) {
-        productDetail.classList.add('inactive');
-    }
+    preguntaMobileMenu()
+    preguntaAsideMyorders()
+    preguntaProductDetail()
 }
 function toggleMobileMenu(){
     mobileMenu.classList.toggle('inactive');
      //pregunta si No tiene la clase
-     if (!desktopMenu.classList.contains('inactive')) {
-        desktopMenu.classList.add('inactive');
-    }
-    if (!asideMyorders.classList.contains('inactive')) {
-        asideMyorders.classList.add('inactive');
-    }
-    if (!productDetail.classList.contains('inactive')) {
-        productDetail.classList.add('inactive');
-    }
+     preguntaDesktopMenu()
+     preguntaAsideMyorders()
+     preguntaProductDetail()
 }
 function toggleAsideMyorders(){
     asideMyorders.classList.toggle('inactive');
      //pregunta si No tiene la clase
-     if (!mobileMenu.classList.contains('inactive')) {
-        mobileMenu.classList.add('inactive');
-    }
-    if (!desktopMenu.classList.contains('inactive')) {
-        desktopMenu.classList.add('inactive');
-    }
-    if (!productDetail.classList.contains('inactive')) {
-        productDetail.classList.add('inactive');
-    }
+     preguntaMobileMenu()
+     preguntaDesktopMenu()
+     preguntaProductDetail()
 }
 function toggleProdutDetail(){
     productDetail.classList.toggle('inactive')
+    preguntaMobileMenu()
+     preguntaDesktopMenu()
+     preguntaAsideMyorders()
+}
+function preguntaMobileMenu(){
     if (!mobileMenu.classList.contains('inactive')) {
         mobileMenu.classList.add('inactive');
     }
+}
+function preguntaDesktopMenu(){
     if (!desktopMenu.classList.contains('inactive')) {
         desktopMenu.classList.add('inactive');
     }
+}
+function preguntaAsideMyorders(){
     if (!asideMyorders.classList.contains('inactive')) {
         asideMyorders.classList.add('inactive');
     }
 }
-
+function preguntaProductDetail(){
+    if (!productDetail.classList.contains('inactive')) {
+        productDetail.classList.add('inactive');
+    }
+}
 // no esta funcionando openproduct 
 const productList = [];
 productList.push({

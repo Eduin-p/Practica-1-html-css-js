@@ -128,13 +128,17 @@ body {
 /* ---------menu mobile izquierda ------*/
 .mobile-menu {
     width: 200px;
-    border: 2px solid var(--very-light-pink);
+    position: absolute;
+    background: var(--white);
+    /* border: 2px solid var(--very-light-pink); */
     border-radius: 8px;
-    padding: 10px 20px 0 30px;
+    padding: 10px 20px 10px 30px;
+    box-shadow:3px 6px 15px rgba(0, 0, 0, 0.3);
+
 }
 .mobile-menu ul {
     list-style: none;
-    margin: 36px 0 0;/* separa un poco los ul en la parte superior */
+    margin: 24px 0 0;/* separa un poco los ul en la parte superior */
     padding: 0;
     font-weight: bold;
 }
@@ -169,14 +173,11 @@ body {
 
 /* ----------- aside shopping cart menu derecha------------ */
 .my-orders{
-    /* display: flex;
-    align-items: center; 
-    flex-direction: column; */
     width: 500px;
     margin-left: auto;
     position: absolute;
     top: 69px;    
-    right: 20px;     
+    right: 15px;     
     background: var(--white);       
     border-radius: 20px;
     padding-left: 15px;
@@ -343,9 +344,9 @@ body {
     border-radius: 8px;
     border: none;
     color: var(--white);
-    cursor: pointer;/*para que aparezca una mano en vez de una fecha al pasar el cursor por encima del boton  */
+    cursor: pointer;/*para que aparezca una mano en vez de una fecha al pasar el cursor por encima del boton  
     font-size: var(--md);
-    font-weight: bold;/*negrilla 
+    font-weight: bold;negrilla 
 } lo quito porque ya existe uno 
 */
 .add-to-cart-button{
@@ -413,8 +414,7 @@ body {
     }
     /* estilo detalle producto */
     .product-detail{
-        width: 100%;
-        display: none;
+        width: 95%;
     }
     /* estilos de navbar */
     .menu{
@@ -431,7 +431,7 @@ body {
         display: none;
     }
     .my-orders{
-        width: 100%;
+        width: 87%;
     }
 
 }
