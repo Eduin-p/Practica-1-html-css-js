@@ -1,11 +1,10 @@
 
 const menuEmail = document.querySelector(".email img");//donde se hace click
 const desktopMenu= document.querySelector(".desktop-menu"); // la clase que se modifica
-menuEmail.addEventListener('click',toggledesktopMenu)// funcion cuando se hace click
+
 
 const menuMobile = document.querySelector(".menu");
 const mobileMenu= document.querySelector(".mobile-menu");
-menuMobile.addEventListener('click',toggleMobileMenu)
 
 const menuCarrito = document.querySelector(".carrito");
 const flechaCarrito = document.querySelector(".menu-container figure img");
@@ -14,72 +13,31 @@ const cardsContainer= document.querySelector(".cards-container-carrito");
 const cardsContainerInicio= document.querySelector(".cards-container");
 const productDetail =document.querySelector(".product-detail");
 const closeProductDetail = document.querySelector(".product-detail-close img")
-menuCarrito.addEventListener('click',toggleAsideMyorders)
-flechaCarrito.addEventListener('click',toggleAsideMyorders)
-//closeProductDetail.addEventListener('click',toggleProdutDetail)
+//array con las secciones de menu
+const sectionSelect =[
+    desktopMenu,
+    mobileMenu,
+    asideMyorders,
+    productDetail,
+]
+menuEmail.addEventListener('click',() =>selecionarSection(0))// funcion cuando se hace click
+menuMobile.addEventListener('click',() =>selecionarSection(1))
+menuCarrito.addEventListener('click',() =>selecionarSection(2))
+flechaCarrito.addEventListener('click',() =>selecionarSection(2))
+closeProductDetail.addEventListener('click',() =>selecionarSection(3))
+//() =>selecionarSection(3) funcion de flecha , para poder pasar valores a la funcion
 
-closeProductDetail.addEventListener('click', function(event) {
-    // Obtener el elemento en el que se hizo clic
-    const elemento = event.target;
-    
-    // Aplicar toggle a la clase 'inactive' en el elemento
-    elemento.classList.toggle('inactive');
-  });
-
-  
-// falta arreglar 
-
-
-
-function toggledesktopMenu(){
-    desktopMenu.classList.toggle('inactive');
-    //pregunta si No tiene la clase
-    preguntaMobileMenu()
-    preguntaAsideMyorders()
-    preguntaProductDetail()
-}
-function toggleMobileMenu(){
-    mobileMenu.classList.toggle('inactive');
-     //pregunta si No tiene la clase
-     preguntaDesktopMenu()
-     preguntaAsideMyorders()
-     preguntaProductDetail()
-}
-function toggleAsideMyorders(){
-    asideMyorders.classList.toggle('inactive');
-     //pregunta si No tiene la clase
-     preguntaMobileMenu()
-     preguntaDesktopMenu()
-     preguntaProductDetail()
-}
-function toggleProdutDetail(){
-    productDetail.classList.toggle('inactive')
-    preguntaMobileMenu()
-     preguntaDesktopMenu()
-     preguntaAsideMyorders()
-}
-
-function preguntaMobileMenu(){
-    if (!mobileMenu.classList.contains('inactive')) {
-        mobileMenu.classList.add('inactive');
+function selecionarSection(section){
+    for (let index = 0; index < sectionSelect.length; index++) {
+        const element = sectionSelect[index];
+        if (index==section) {
+            element.classList.toggle('inactive');
+        }else{
+            element.classList.add('inactive');
+        }
     }
 }
-function preguntaDesktopMenu(){
-    if (!desktopMenu.classList.contains('inactive')) {
-        desktopMenu.classList.add('inactive');
-    }
-}
-function preguntaAsideMyorders(){
-    if (!asideMyorders.classList.contains('inactive')) {
-        asideMyorders.classList.add('inactive');
-    }
-}
-function preguntaProductDetail(){
-    if (!productDetail.classList.contains('inactive')) {
-        productDetail.classList.add('inactive');
-    }
-}
-// no esta funcionando openproduct 
+
 const productList = [];
 productList.push({
     name: 'Bike',
@@ -170,7 +128,7 @@ function renderProductsInicio(arr){//creacion de cards de inicio
             const img =document.createElement('img');
             img.setAttribute('src',product.image)
             productCard.appendChild(img);// meter los elementos en su padre
-            img.addEventListener('click',toggleProdutDetail)//se pone la funcion sin parentesis
+            img.addEventListener('click',() =>selecionarSection(3))//se pone la funcion sin parentesis
         // -----------------------------------------
             const productInfo =document.createElement('div');
             productInfo.classList.add('product-info')
